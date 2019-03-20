@@ -1,0 +1,82 @@
+/* 레이어팝업 */
+.layer-popup {
+	display: none;
+	position: absolute;
+	z-index: 1000;
+
+	@at-root .modal-opened {
+		overflow: hidden;
+	}
+
+	&.show {
+		display: block;
+	}
+
+	.card {
+		box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+	}
+
+	&.layer-modal {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+		overflow-y: scroll;
+
+		.card {
+			position: relative;
+			margin: 110px auto 80px;
+			border-color: transparent;
+		}
+
+		.card-info {
+			margin: 0 auto 80px;
+		}
+	}
+
+	&.layer-dialogue {
+		position: fixed;
+		top: 110px;
+		left: 50%;
+		width: 320px;
+		margin-left: -160px;
+		padding: 0;
+
+		.card {
+			// @extend .card-sm;
+
+			.card-header {
+				// margin: 0;
+				padding: 0;
+			}
+
+			.card-title {
+				padding: 20px 20px 15px;
+				text-align: center;
+				font-size: 22px;
+			}
+
+			.card-body {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-height: 50px;
+				text-align: center;
+				overflow: hidden;
+			}
+
+			.card-footer {
+				margin-top: 0;
+				border-top: 0;
+				background-color: transparent;
+			}
+		}
+
+		@at-root .dialogue-message {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
+}

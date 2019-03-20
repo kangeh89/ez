@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	min-width: 320px;
+	color: $color-default;
+	font-size: $font-size-base;
+	font-family: $font-family-base;
+	line-height: $line-height-base;
+	word-break: keep-all;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	overflow-y: scroll;
+}
+
+header,
+section,
+article,
+aside,
+footer,
+nav {
+	display: block;
+}
+
+fieldset {
+	display: block;
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+strong,
+b,
+th {
+	font-weight: 700;
+}
+
+pre {
+	white-space: pre-wrap;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+	border: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a,
+select,
+button,
+input,
+textarea {
+	font-family: inherit;
+	transition-duration: .2s;
+	transition-property: color, background-color, border-color, opacity;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button,
+input[type=submit] {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	color: inherit;
+	cursor: pointer;
+	background: transparent;
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+	display: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+.tts {
+	font-size: 0;
+	line-height: 0;
+	overflow: hidden;
+
+	&:not(caption) {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+	}
+}
+
+caption.tts {
+	height: 0;
+}
+
+.clearfix {
+	position: relative;
+	@include clearfix;
+}
+
+.float {
+	&-left {
+		float: left !important;
+	}
+
+	&-right {
+		float: right !important;
+	}
+
+	&-none {
+		float: none !important;
+	}
+}
+
+.vertical {
+	&-top {
+		vertical-align: top !important;
+	}
+
+	&-middle {
+		vertical-align: middle !important;
+	}
+
+	&-bottom {
+		vertical-align: bottom !important;
+	}
+}

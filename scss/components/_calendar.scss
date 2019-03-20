@@ -1,0 +1,157 @@
+/* 레이어 달력 */
+#divCalendar {
+	position: absolute;
+	width: 250px;
+	margin-top: -1px;
+	padding: 5px 10px 10px;
+	max-width: 100%;
+	font-size: $font-size-xs;
+	border: 1px solid $border-color-base;
+	background-color: #fff;
+	z-index: 3500;
+
+	table {
+		table-layout: auto;
+		border-collapse: collapse;
+		margin: 0;
+		width: 100%;
+		text-align: center;
+		border: 0;
+		color: $color-darkgray;
+
+		caption {
+			height: 0;
+			font-size: 0;
+			line-height: 0;
+			overflow: hidden;
+		}
+
+		th,
+		td {
+			border: 0;
+			height: 28px;
+			line-height: 28px;
+			font-weight: normal;
+		}
+
+		a {
+			display: block;
+		}
+	}
+
+	#tableCalendar {
+		border-collapse: collapse;
+
+		th:first-child,
+		td:first-child {
+			color: #df0000;
+		}
+
+		th:last-child,
+		td:last-child {
+			color: #0d46c8;
+		}
+
+		.today {
+			color: #fff !important;
+			background-color: $color-primary;
+			font-weight: bold;
+		}
+	}
+
+	#tableYearTitle,
+	#tableMonthTitle,
+	#tableCalendarTitle {
+		width: 100%;
+		table-layout: fixed;
+		margin: .5em 0;
+		font-size: $font-size-lg;
+
+		td:nth-child(2) {
+			width: 55%;
+		}
+
+		a {
+			font-weight: $font-weight-bold;
+		}
+	}
+
+	.prev,
+	.next {
+		display: block;
+		position: relative;
+		width: 28px;
+		height: 28px;
+		margin: auto;
+		padding: 0;
+		text-indent: -9999px;
+		line-height: 38px;
+		white-space: nowrap;
+		overflow: hidden;
+		color: $color-lightgray;
+
+		&:hover {
+			color: $color-gray;
+		}
+
+		&:before {
+			position: absolute;
+			top: 1px;
+			left: 0;
+			right: 0;
+			line-height: 28px;
+			text-indent: 0;
+			font-weight: 900;
+			font-family: $font-family-fa;
+		}
+	}
+
+	.prev {
+		float: right;
+
+		&:before {
+			content: '\f053';
+		}
+	}
+
+	.next {
+		float: left;
+
+		&:before {
+			content: '\f054';
+		}
+	}
+
+	.btn-cal-close {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 24px;
+		height: 25px;
+
+		a {
+			position: relative;
+			display: block;
+			text-indent: -9999px;
+			line-height: 25px;
+			color: $color-lightgray;
+			overflow: hidden;
+
+			&:hover {
+				color: $color-gray;
+			}
+
+			&:before {
+				position: absolute;
+				left: 0;
+				right: 0;
+				font-size: $font-size-lg;
+				font-weight: 900;
+				font-family: $font-family-fa;
+				text-indent: 0;
+				text-align: center;
+				content: "\f00d";
+			}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+//
+// 변수설정
+//
+
+// 색상
+$color-primary: #1f9cee !default;
+$color-secondary: #0b98ea !default;
+
+$color-default: #333 !default;
+$color-darkgray: #010101 !default;
+$color-gray: #999 !default;
+$color-orange: #ee9538 !default;
+$color-red: #e42f44 !default;
+$color-lightgray: #888899 !default;
+
+$border-color-dark: #333 !default;
+$border-color-base: #ccc !default;
+$border-color-light: #e5e5e5 !default;
+
+$bg-dark: #2f3253 !default;
+$bg-darkgray: #555565 !default;
+$bg-gray: #dddddd !default;
+$bg-lightgray: #f1f1f1 !default;
+
+// 사이즈
+$font-size-xs: 1.1rem !default;
+$font-size-sm: 1.2rem !default;
+$font-size-base: 1.3rem !default;
+$font-size-lg: 1.4rem !default;
+$font-size-xl: 1.6rem !default;
+$font-size-xxl: 1.8rem !default;
+
+//$font-weight-thin: 100 !default;
+//$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+
+$line-height-sm: 1.1 !default;
+$line-height-base: 1.4 !default;
+$line-height-lg: 1.55 !default;
+
+// 글꼴
+$font-family-fa: "Font Awesome 5 Free";
+$font-family-fab: "Font Awesome 5 Brands";
+$font-family-base: "Spoqa Han Sans",
+"SpoqaHanSans",
+"Helvetica",
+"apple sd gothic neo",
+"Noto Sans KR",
+"Noto Sans CJK KR",
+"Arial",
+"맑은 고딕",
+"Malgun Gothic",
+sans-serif;
+
+// 경로
+$url-fonts: "../webfonts";
+$url-img: "../images";
+
+
+// form
+$form-height-xs: 22px;
+$form-height-sm: 28px;
+$form-height-base: 40px;
+$form-height-lg: 50px;
+
+$form-border-radius: 3px;
+$form-search-height: 45px;
+
+$btn-height-xs: 22px;
+$btn-height-sm: 28px;
+$btn-height-base: 35px;
+$btn-height-lg: 45px;
+$btn-height-xl: 55px;
+
+// tabmenu
+$tab-list-height: 45px;
+
+// table
+$data-table-header: 28px;
+$data-table-row: 45px;

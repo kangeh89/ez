@@ -1,0 +1,120 @@
+/* list */
+.bul {
+	@mixin bul-style {
+		display: block;
+		position: absolute;
+		left: 0;
+	}
+
+	@mixin bul-dot-style {
+		top: 8px;
+		width: 2px;
+		height: 2px;
+		background-color: $color-default;
+		content: '';
+	}
+
+	@mixin bul-hyphen-style {
+		top: 0;
+		content: '- ';
+	}
+	@mixin bul-star-style {
+		top: 0;
+
+		content: '＊ ';
+	}
+	&-star,
+	&-dot,
+	&-hyphen {
+		text-align: left;
+		position: relative;
+		padding-left: 10px;
+
+		&:before {
+			@include bul-style;
+		}
+
+		> li {
+			position: relative;
+
+			&:before {
+				@include bul-style;
+			}
+
+			& + li {
+				margin-top: 0.3em;
+			}
+		}
+	}
+
+	&-dot {
+		> li {
+			padding-left: 10px;
+		}
+
+		&:before {
+			@include bul-style;
+			@include bul-dot-style;
+		}
+
+		> li {
+			&:before {
+				@include bul-style;
+				@include bul-dot-style;
+			}
+		}
+	}
+
+	&-hyphen {
+		
+		> li {
+			padding-left: 10px;
+		}
+
+		&:before {
+			@include bul-style;
+			@include bul-hyphen-style;
+		}
+
+		> li {
+			&:before {
+				@include bul-style;
+				@include bul-hyphen-style;
+			}
+		}
+	}
+	&-star {
+		color:$color-red;
+		font-size:$font-size-base;
+		padding-left:0;
+		> li {
+			padding-left: 12px;
+		}
+
+		// &:before {
+		// 	@include bul-style;
+		// 	@include bul-star-style;
+		// }
+
+		> li {
+			&:before {
+				@include bul-style;
+				@include bul-star-style;
+				font-size:$font-size-xs;
+				top:1px;
+			}
+		}
+	}
+}
+
+ul.bul {
+
+	&-dot,
+	&-hyphen {
+		padding-left: 0;
+
+		&:before {
+			display: none;
+		}
+	}
+}

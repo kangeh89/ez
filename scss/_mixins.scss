@@ -1,0 +1,12 @@
+//
+// 믹스인 MIXIN
+// 
+
+
+@mixin clearfix {
+	&:after {
+		display: block;
+		clear: both;
+		content: '';
+	}
+}

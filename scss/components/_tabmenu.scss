@@ -1,0 +1,60 @@
+/* 탭메뉴 */
+.tab-list {
+	display: flex;
+	width: 100%;
+	border-bottom: 1px solid $color-lightgray;
+	height: $tab-list-height;
+
+	li {
+		flex: 1;
+		position: relative;
+		background-color: #fff;
+
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+
+			font-size: $font-size-lg;
+
+			&:hover {
+				font-weight: $font-weight-bold;
+
+				color: $color-darkgray;
+			}
+		}
+
+		&.on {
+			a {
+				font-weight: $font-weight-bold;
+				color: $color-darkgray;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				right: 0;
+				bottom: -1px;
+				left: 0;
+
+				height: 3px;
+				background-color: $color-darkgray;
+			}
+		}
+
+		.badge {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			width: 6px;
+			height: 6px;
+			background-color: $color-red;
+			border-radius: 50%;
+		}
+	}
+}
+
+.tab-cont {
+	display: none;
+}
